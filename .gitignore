@@ -1,0 +1,9 @@
+.idea
+.idea_modules
+*.iml
+target
+project/target
+.lib
+.DS_Store
+sbt
+
