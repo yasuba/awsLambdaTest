@@ -10,7 +10,6 @@ import slackTime.DateAndTime._
 
 import scala.util.{Failure, Success, Try}
 
-
 case class SlashCommand(
                          token        : String,
                          team_id      : String,
@@ -44,11 +43,8 @@ class Slack {
   }
 
   def time(in: InputStream, out: OutputStream): Unit = {
-
     val payload = scala.io.Source.fromInputStream(in).mkString("")
-
     val json: JValue = parse(payload)
-
     out.write(reply(json).getBytes(UTF_8))
   }
 
